@@ -1,0 +1,7 @@
+name: TestServerUtils
+version: 1.0.0
+author: FlorianMichael as Jesse
+api-version: 1.13
+main: de.florianmichael.testserverutils.TestServerUtils
+commands:
+  test:
