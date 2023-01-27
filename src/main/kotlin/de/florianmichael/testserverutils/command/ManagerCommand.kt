@@ -18,6 +18,7 @@ object ManagerCommand {
         ackCommand(WrapperCommandWorkbench())
         ackCommand(WrapperCommandEnderChest())
         ackCommand(WrappedCommandPTime())
+        ackCommand(WrappedCommandSocialSpy())
     }
 
     fun unwrapCommandExecution(sender: CommandSender, command: Command, args: Array<out String>, label: String) {

@@ -1,5 +1,5 @@
 name: TestServerUtils
-version: 1.2.1
+version: 1.3.1
 author: FlorianMichael as Jesse
 api-version: 1.13
 description: Just some spigot based commands for test servers
@@ -16,3 +16,4 @@ commands:
   echest:
   ec:
   ptime:
+  socialspy:

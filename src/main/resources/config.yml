@@ -15,8 +15,16 @@ repair-permission: "tsu.enchant"
 enderchest-permission: "tsu.enderchest"
 workbench-permission: "tsu.workbench"
 ptime-permission: "tsu.ptime"
+socialspy-permission: "tsu.socialspy"
 
 # Messages
 clear-message: "&aYour inventory has been cleared"
 repair-message: "&aThe item in your hand was repaired"
 ptime-message: "&aYou have changed your own time"
+
+# Social Spy
+socialspy-added-message: "&aYou can now see the commands from other players"
+socialspy-removed-message: "&cYou can no longer see the commands from other players"
+
+socialspy-format: "&a[%s] &7%s" ## first string is the sender, second is the message
+
