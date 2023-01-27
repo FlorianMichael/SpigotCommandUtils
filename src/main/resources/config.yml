@@ -1,0 +1,20 @@
+#######################################
+# Test Server Utils by FlorianMichael #
+#######################################
+
+# General settings
+prefix: "&6TestServerUtils"
+not-a-player: "&cYou need to be a player to perform this command!"
+no-permission: "&cYou don't have enough permissions to perform this command!"
+
+# Permissions
+clear-permission: "tsu.clear"
+trash-permission: "tsu.trash"
+enchant-permission: "tsu.enchant"
+repair-permission: "tsu.enchant"
+enderchest-command: "tsu.enderchest"
+workbench-command: "tsu.workbench"
+
+# Messages
+clear-message: "&aYour inventory has been cleared"
+repair-message: "&aThe item in your hand was repaired"
