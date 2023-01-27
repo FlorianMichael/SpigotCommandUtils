@@ -16,7 +16,7 @@ class WrapperCommandEnderChest : WrappedCommand("enderchest", "echest", "ec") {
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.executes {
         it.source.sender.apply {
             if (checkPlayer() && checkPermission(permission)) {
-                (this as Player).openInventory(Bukkit.createInventory(this, InventoryType.ENDER_CHEST))
+                (this as Player).openInventory(this.enderChest)
             }
         }
         return@executes SUCCESS

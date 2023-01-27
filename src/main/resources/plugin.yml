@@ -1,7 +1,8 @@
 name: TestServerUtils
-version: 1.0.0
+version: 1.1.0
 author: FlorianMichael as Jesse
 api-version: 1.13
+description: Just some spigot based commands for test servers
 main: de.florianmichael.testserverutils.TestServerUtils
 commands:
   clear:
@@ -14,3 +15,4 @@ commands:
   enderchest:
   echest:
   ec:
+  ptime:

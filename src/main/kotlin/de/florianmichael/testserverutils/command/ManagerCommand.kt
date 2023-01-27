@@ -17,11 +17,14 @@ object ManagerCommand {
         ackCommand(WrappedCommandRepair())
         ackCommand(WrapperCommandWorkbench())
         ackCommand(WrapperCommandEnderChest())
+        ackCommand(WrappedCommandPTime())
     }
 
     fun unwrapCommandExecution(sender: CommandSender, command: Command, args: Array<out String>, label: String) {
         try {
-            dispatcher.execute(("$label ").trim() + args.joinToString(" ").trim(), SpigotCommandSource(sender, command, label))
+            args.joinToString(" ").apply {
+                dispatcher.execute(label + (if (this.isNotEmpty()) " $this" else ""), SpigotCommandSource(sender, command, label))
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -29,8 +32,10 @@ object ManagerCommand {
 
     fun unwrapCommandCompletion(sender: CommandSender, command: Command, args: Array<out String>, label: String): MutableList<String> {
         return try {
-            val parseResults = dispatcher.parse(("$label ").trim() + args.joinToString(" "), SpigotCommandSource(sender, command, label))
+            val argsAsString = args.joinToString(" ")
+            val parseResults = dispatcher.parse(label + (if (argsAsString.isNotEmpty()) " $argsAsString" else ""), SpigotCommandSource(sender, command, label))
             val completionSuggestions = dispatcher.getCompletionSuggestions(parseResults).get()
+
             completionSuggestions.list.map { it.text }.toMutableList()
         } catch (e: Exception) {
             e.printStackTrace()
