@@ -33,7 +33,7 @@ commands:
     format: "&a[%s] &7%s"
   setspawn:
     permission: "tsu.setspawn"
-    message: "&a"
+    message: "&aThe spawn point has been set to your current position!"
     spawn-position:
       ==: org.bukkit.Location
       world: world
@@ -42,3 +42,6 @@ commands:
       z: 0.0
       pitch: 0.0
       yaw: 0.0
+  spawn:
+    permission: "tsu.spawn"
+    message: "&aYou were teleported to the spawn point"
