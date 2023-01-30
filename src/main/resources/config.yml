@@ -7,6 +7,7 @@ messages:
   prefix: "&6TestServerUtils"
   not-a-player: "&cYou need to be a player to perform this command!"
   no-permission: "&cYou don't have enough permissions to perform this command!"
+  player-not-online: "&cThis player is not online!"
 
 commands:
   clear:
@@ -45,3 +46,9 @@ commands:
   spawn:
     permission: "tsu.spawn"
     message: "&aYou were teleported to the spawn point"
+  fly:
+    permission: "tsu.fly"
+    added-message: "&aYou can fly now"
+    removed-message: "&cYou can no longer fly now"
+    added-other-message: "&6%s &acan fly now"
+    removed-other-message: "&6%s &acan no longer fly now"

@@ -1,5 +1,5 @@
 name: TestServerUtils
-version: 1.4.3
+version: 1.5.3
 author: FlorianMichael as Jesse
 api-version: 1.13
 description: Just some spigot based commands for test servers
@@ -19,3 +19,4 @@ commands:
   socialspy:
   setspawn:
   spawn:
+  fly:

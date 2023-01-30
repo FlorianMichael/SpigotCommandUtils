@@ -20,6 +20,8 @@ object ManagerCommand {
         ackCommand(WrappedCommandPTime())
         ackCommand(WrappedCommandSocialSpy())
         ackCommand(WrappedCommandSetSpawn())
+        ackCommand(WrappedCommandSpawn())
+        ackCommand(WrappedCommandFly())
     }
 
     fun unwrapCommandExecution(sender: CommandSender, command: Command, args: Array<out String>, label: String) {

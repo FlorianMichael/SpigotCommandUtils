@@ -12,6 +12,7 @@ object ConfigurationWrapper {
     var prefix: String
     var notAPlayer: String
     var noPermission: String
+    var playerNotOnline: String
 
     init {
         TestServerUtils.get().apply {
@@ -21,6 +22,7 @@ object ConfigurationWrapper {
             prefix = unwrapString("messages.prefix")
             notAPlayer = unwrapString("messages.not-a-player")
             noPermission = unwrapString("messages.no-permission")
+            playerNotOnline = unwrapString("player-not-online")
         }
     }
 
