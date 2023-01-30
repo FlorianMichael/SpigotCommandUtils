@@ -11,8 +11,8 @@ import org.bukkit.entity.Player
 
 class WrappedCommandClear : WrappedCommand("clear") {
     
-    private val permission = ConfigurationWrapper.unwrapString("clear-permission")
-    private val message = ConfigurationWrapper.unwrapString("clear-message")
+    private val permission = ConfigurationWrapper.unwrapString("commands.clear.permission")
+    private val message = ConfigurationWrapper.unwrapString("commands.clear.message")
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.executes {
         it.source.sender.apply {

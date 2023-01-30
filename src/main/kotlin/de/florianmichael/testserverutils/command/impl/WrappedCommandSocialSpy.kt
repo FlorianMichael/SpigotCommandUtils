@@ -16,12 +16,12 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent
 import java.util.UUID
 
 class WrappedCommandSocialSpy : WrappedCommand("socialspy") {
-    private val permission = ConfigurationWrapper.unwrapString("socialspy-permission")
+    private val permission = ConfigurationWrapper.unwrapString("commands.socialspy.permission")
 
-    private val addedMessage = ConfigurationWrapper.unwrapString("socialspy-added-message")
-    private val removedMessage = ConfigurationWrapper.unwrapString("socialspy-removed-message")
+    private val addedMessage = ConfigurationWrapper.unwrapString("commands.socialspy.added-message")
+    private val removedMessage = ConfigurationWrapper.unwrapString("commands.socialspy.removed-message")
 
-    private val format = ConfigurationWrapper.unwrapString("socialspy-format")
+    private val format = ConfigurationWrapper.unwrapString("commands.socialspy.format")
 
     private val listeners = ArrayList<UUID>()
 

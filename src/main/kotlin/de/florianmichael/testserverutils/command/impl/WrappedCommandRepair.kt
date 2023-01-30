@@ -11,8 +11,8 @@ import org.bukkit.entity.Player
 import org.bukkit.inventory.meta.Damageable
 
 class WrappedCommandRepair : WrappedCommand("repair", "fix") {
-    private val permission = ConfigurationWrapper.unwrapString("repair-permission")
-    private val message = ConfigurationWrapper.unwrapString("repair-message")
+    private val permission = ConfigurationWrapper.unwrapString("commands.repair.permission")
+    private val message = ConfigurationWrapper.unwrapString("commands.repair.message")
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.executes {
         it.source.sender.apply {

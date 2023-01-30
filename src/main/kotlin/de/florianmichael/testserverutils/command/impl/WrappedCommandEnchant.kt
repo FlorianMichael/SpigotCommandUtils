@@ -11,7 +11,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryType
 
 class WrappedCommandEnchant : WrappedCommand("enchant") {
-    private val permission = ConfigurationWrapper.unwrapString("enchant-permission")
+    private val permission = ConfigurationWrapper.unwrapString("commands.enchant.permission")
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.executes {
         it.source.sender.apply {

@@ -12,8 +12,8 @@ import org.bukkit.entity.Player
 
 @Suppress("NAME_SHADOWING")
 class WrappedCommandPTime : WrappedCommand("ptime") {
-    private val permission = ConfigurationWrapper.unwrapString("ptime-permission")
-    private val message = ConfigurationWrapper.unwrapString("ptime-message")
+    private val permission = ConfigurationWrapper.unwrapString("commands.ptime.permission")
+    private val message = ConfigurationWrapper.unwrapString("commands.ptime.message")
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.then(
         argument("time", StringArgumentType.string())!!.suggests { _, builder ->

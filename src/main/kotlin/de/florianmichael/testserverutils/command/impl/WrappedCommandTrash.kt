@@ -10,7 +10,7 @@ import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 
 class WrappedCommandTrash : WrappedCommand("trash", "abfall") {
-    private val permission = ConfigurationWrapper.unwrapString("trash-permission")
+    private val permission = ConfigurationWrapper.unwrapString("commands.trash.permission")
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> = builder.executes {
         it.source.sender.apply {

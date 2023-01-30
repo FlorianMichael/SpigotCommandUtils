@@ -18,9 +18,9 @@ object ConfigurationWrapper {
             configuration = config
             saveDefaultConfig()
 
-            prefix = unwrapString("prefix")
-            notAPlayer = unwrapString("not-a-player")
-            noPermission = unwrapString("no-permission")
+            prefix = unwrapString("messages.prefix")
+            notAPlayer = unwrapString("messages.not-a-player")
+            noPermission = unwrapString("messages.no-permission")
         }
     }
 
