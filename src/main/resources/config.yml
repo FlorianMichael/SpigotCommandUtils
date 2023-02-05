@@ -52,3 +52,5 @@ commands:
     removed-message: "&cYou can no longer fly now"
     added-other-message: "&6%s &acan fly now"
     removed-other-message: "&6%s &acan no longer fly now"
+  invsee:
+    permission: "tsu.invsee"

@@ -3,6 +3,7 @@ package de.florianmichael.testserverutils.command.impl
 import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import de.florianmichael.testserverutils.command.WrappedCommand
+import de.florianmichael.testserverutils.command.brigadier.BukkitPlayerArgumentType
 import de.florianmichael.testserverutils.command.brigadier.BukkitPlayerListSuggestion
 import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
 import de.florianmichael.testserverutils.config.ConfigurationWrapper
@@ -21,16 +22,14 @@ class WrappedCommandFly : WrappedCommand("fly") {
     private val addedOtherMessage = ConfigurationWrapper.unwrapString("commands.fly.added-other-message")
     private val removedOtherMessage = ConfigurationWrapper.unwrapString("commands.fly.removed-other-message")
 
-    private fun internalExecutes(sender: CommandSender, target: String?) {
-        val self = target == null
-
+    private fun internalExecutes(sender: CommandSender, self: Boolean, target: Player?) {
         if (sender.checkPlayer() && sender.checkPermission(permission)) {
             val sender = (sender as Player)
-            if (!self && Bukkit.getPlayer(target!!) == null) {
+            if (!self && target == null) {
                 sender.prefixedMessage(ConfigurationWrapper.playerNotOnline)
                 return
             }
-            (if (self) sender else Bukkit.getPlayer(target!!))?.apply {
+            (if (self) sender else target)?.apply {
                 allowFlight = !allowFlight
 
                 if (allowFlight) {
@@ -45,12 +44,12 @@ class WrappedCommandFly : WrappedCommand("fly") {
     }
 
     override fun builder(builder: LiteralArgumentBuilder<SpigotCommandSource>): LiteralArgumentBuilder<SpigotCommandSource> {
-        builder.then(argument("player", StringArgumentType.string())!!.suggests(BukkitPlayerListSuggestion()).executes {
-            internalExecutes(it.source!!.sender, StringArgumentType.getString(it, "player"))
+        builder.then(argument("player", BukkitPlayerArgumentType.bukkitPlayer())!!.executes {
+            internalExecutes(it.source!!.sender, false, BukkitPlayerArgumentType.getBukkitPlayer(it, "player"))
             return@executes SUCCESS
         })
         return builder.executes {
-            internalExecutes(it.source.sender, null)
+            internalExecutes(it.source.sender, true, null)
             return@executes SUCCESS
         }
     }

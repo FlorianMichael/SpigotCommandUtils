@@ -1,8 +1,10 @@
 package de.florianmichael.testserverutils.command
 
 import com.mojang.brigadier.CommandDispatcher
+import com.mojang.brigadier.exceptions.CommandSyntaxException
 import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
 import de.florianmichael.testserverutils.command.impl.*
+import de.florianmichael.testserverutils.extension.craftbukkit.prefixedMessage
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import java.lang.Exception
@@ -22,15 +24,23 @@ object ManagerCommand {
         ackCommand(WrappedCommandSetSpawn())
         ackCommand(WrappedCommandSpawn())
         ackCommand(WrappedCommandFly())
+        ackCommand(WrappedCommandInvsee())
     }
 
     fun unwrapCommandExecution(sender: CommandSender, command: Command, args: Array<out String>, label: String) {
-        try {
-            args.joinToString(" ").apply {
-                dispatcher.execute(label + (if (this.isNotEmpty()) " $this" else ""), SpigotCommandSource(sender, command, label))
+
+        args.joinToString(" ").apply {
+            val input = label + (if (this.isNotEmpty()) " $this" else "")
+            val nextSource = SpigotCommandSource(sender, command, label)
+
+            try {
+                dispatcher.execute(input, nextSource)
+            } catch (e: CommandSyntaxException) {
+                val parseResults = dispatcher.parse(label, nextSource)
+                val lastNode = parseResults.context.nodes.last().node
+
+                sender.prefixedMessage("Use: /" + label + " " + lastNode.children.joinToString(" ") { it.usageText })
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
     }
 

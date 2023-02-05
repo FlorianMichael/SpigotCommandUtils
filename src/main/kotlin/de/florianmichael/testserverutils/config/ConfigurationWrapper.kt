@@ -22,7 +22,7 @@ object ConfigurationWrapper {
             prefix = unwrapString("messages.prefix")
             notAPlayer = unwrapString("messages.not-a-player")
             noPermission = unwrapString("messages.no-permission")
-            playerNotOnline = unwrapString("player-not-online")
+            playerNotOnline = unwrapString("messages.player-not-online")
         }
     }
 
