@@ -4,7 +4,7 @@ import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.exceptions.CommandSyntaxException
 import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
 import de.florianmichael.testserverutils.command.impl.*
-import de.florianmichael.testserverutils.extension.craftbukkit.prefixedMessage
+import de.florianmichael.testserverutils.util.extension.prefixedMessage
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import java.lang.Exception
@@ -25,6 +25,8 @@ object ManagerCommand {
         ackCommand(WrappedCommandSpawn())
         ackCommand(WrappedCommandFly())
         ackCommand(WrappedCommandInvsee())
+        ackCommand(WrappedCommandViewArmor())
+        ackCommand(WrappedCommandGiveAll())
     }
 
     fun unwrapCommandExecution(sender: CommandSender, command: Command, args: Array<out String>, label: String) {

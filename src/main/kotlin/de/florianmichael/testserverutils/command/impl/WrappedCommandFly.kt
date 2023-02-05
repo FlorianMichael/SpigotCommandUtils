@@ -1,16 +1,13 @@
 package de.florianmichael.testserverutils.command.impl
 
-import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import de.florianmichael.testserverutils.command.WrappedCommand
 import de.florianmichael.testserverutils.command.brigadier.BukkitPlayerArgumentType
-import de.florianmichael.testserverutils.command.brigadier.BukkitPlayerListSuggestion
 import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
 import de.florianmichael.testserverutils.config.ConfigurationWrapper
-import de.florianmichael.testserverutils.extension.craftbukkit.checkPermission
-import de.florianmichael.testserverutils.extension.craftbukkit.checkPlayer
-import de.florianmichael.testserverutils.extension.craftbukkit.prefixedMessage
-import org.bukkit.Bukkit
+import de.florianmichael.testserverutils.util.extension.checkPermission
+import de.florianmichael.testserverutils.util.extension.checkPlayer
+import de.florianmichael.testserverutils.util.extension.prefixedMessage
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 

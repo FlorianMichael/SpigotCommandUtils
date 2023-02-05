@@ -1,4 +1,4 @@
-package de.florianmichael.testserverutils.extension.craftbukkit
+package de.florianmichael.testserverutils.util.extension
 
 import de.florianmichael.testserverutils.config.ConfigurationWrapper
 import org.bukkit.command.CommandSender

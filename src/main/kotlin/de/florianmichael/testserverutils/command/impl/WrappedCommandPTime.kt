@@ -5,9 +5,9 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import de.florianmichael.testserverutils.command.WrappedCommand
 import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
 import de.florianmichael.testserverutils.config.ConfigurationWrapper
-import de.florianmichael.testserverutils.extension.craftbukkit.checkPermission
-import de.florianmichael.testserverutils.extension.craftbukkit.checkPlayer
-import de.florianmichael.testserverutils.extension.craftbukkit.prefixedMessage
+import de.florianmichael.testserverutils.util.extension.checkPermission
+import de.florianmichael.testserverutils.util.extension.checkPlayer
+import de.florianmichael.testserverutils.util.extension.prefixedMessage
 import org.bukkit.entity.Player
 
 @Suppress("NAME_SHADOWING")

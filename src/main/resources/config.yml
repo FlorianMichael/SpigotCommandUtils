@@ -54,3 +54,8 @@ commands:
     removed-other-message: "&6%s &acan no longer fly now"
   invsee:
     permission: "tsu.invsee"
+  viewarmor:
+    permission: "tsu.viewarmor"
+  giveall:
+    permission: "tsu.giveall"
+    message: "&aYou have given the item &6%s &ato all players"

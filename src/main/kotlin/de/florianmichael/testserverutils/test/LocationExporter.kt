@@ -1,4 +1,4 @@
-package test
+package de.florianmichael.testserverutils.test
 
 import de.florianmichael.testserverutils.TestServerUtils
 import org.bukkit.Location
