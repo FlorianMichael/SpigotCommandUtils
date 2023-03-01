@@ -1,4 +1,4 @@
-package de.florianmichael.testserverutils.util
+package de.florianmichael.spigotcommandutils.util
 
 class Timer {
 

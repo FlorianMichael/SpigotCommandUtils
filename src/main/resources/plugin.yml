@@ -1,9 +1,9 @@
-name: TestServerUtils
+name: SpigotCommandUtils
 version: 1.7.4
 author: FlorianMichael as Jesse
 api-version: 1.13
 description: Just some spigot based commands for test servers
-main: de.florianmichael.testserverutils.TestServerUtils
+main: de.florianmichael.spigotcommandutils.SpigotCommandUtils
 commands:
   clear:
   trash:

@@ -1,6 +1,6 @@
-package de.florianmichael.testserverutils.config
+package de.florianmichael.spigotcommandutils.config
 
-import de.florianmichael.testserverutils.TestServerUtils
+import de.florianmichael.spigotcommandutils.SpigotCommandUtils
 import org.bukkit.ChatColor
 import org.bukkit.configuration.file.FileConfiguration
 
@@ -15,7 +15,7 @@ object ConfigurationWrapper {
     var playerNotOnline: String
 
     init {
-        TestServerUtils.get().apply {
+        SpigotCommandUtils.get().apply {
             configuration = config
             saveDefaultConfig()
 

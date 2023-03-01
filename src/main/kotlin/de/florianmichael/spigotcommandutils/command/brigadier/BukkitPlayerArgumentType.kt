@@ -1,4 +1,4 @@
-package de.florianmichael.testserverutils.command.brigadier
+package de.florianmichael.spigotcommandutils.command.brigadier
 
 import com.mojang.brigadier.LiteralMessage
 import com.mojang.brigadier.StringReader
@@ -7,7 +7,7 @@ import com.mojang.brigadier.context.CommandContext
 import com.mojang.brigadier.exceptions.DynamicCommandExceptionType
 import com.mojang.brigadier.suggestion.Suggestions
 import com.mojang.brigadier.suggestion.SuggestionsBuilder
-import de.florianmichael.testserverutils.config.ConfigurationWrapper
+import de.florianmichael.spigotcommandutils.config.ConfigurationWrapper
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import java.util.concurrent.CompletableFuture

@@ -1,10 +1,10 @@
-#####################################################
-# Test Server Utils by FlorianMichael               #
-# https://github.com/FlorianMichael/TestServerUtils #
-#####################################################
+########################################################
+# Spigot Command Utils by FlorianMichael               #
+# https://github.com/FlorianMichael/SpigotCommandUtils #
+########################################################
 
 messages:
-  prefix: "&6TestServerUtils"
+  prefix: "&6SpigotCommandUtils"
   not-a-player: "&cYou need to be a player to perform this command!"
   no-permission: "&cYou don't have enough permissions to perform this command!"
   player-not-online: "&cThis player is not online!"

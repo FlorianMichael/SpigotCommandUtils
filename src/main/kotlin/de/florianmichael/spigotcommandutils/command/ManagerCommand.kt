@@ -1,10 +1,10 @@
-package de.florianmichael.testserverutils.command
+package de.florianmichael.spigotcommandutils.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.exceptions.CommandSyntaxException
-import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
-import de.florianmichael.testserverutils.command.impl.*
-import de.florianmichael.testserverutils.util.extension.prefixedMessage
+import de.florianmichael.spigotcommandutils.command.brigadier.SpigotCommandSource
+import de.florianmichael.spigotcommandutils.command.impl.*
+import de.florianmichael.spigotcommandutils.util.extension.prefixedMessage
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import java.lang.Exception

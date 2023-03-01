@@ -1,6 +1,6 @@
-package de.florianmichael.testserverutils.util.extension
+package de.florianmichael.spigotcommandutils.util.extension
 
-import de.florianmichael.testserverutils.config.ConfigurationWrapper
+import de.florianmichael.spigotcommandutils.config.ConfigurationWrapper
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 

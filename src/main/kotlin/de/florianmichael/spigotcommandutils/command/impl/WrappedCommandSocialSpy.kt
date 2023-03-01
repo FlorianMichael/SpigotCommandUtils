@@ -1,13 +1,13 @@
-package de.florianmichael.testserverutils.command.impl
+package de.florianmichael.spigotcommandutils.command.impl
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
-import de.florianmichael.testserverutils.TestServerUtils
-import de.florianmichael.testserverutils.command.WrappedCommand
-import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
-import de.florianmichael.testserverutils.config.ConfigurationWrapper
-import de.florianmichael.testserverutils.util.extension.checkPermission
-import de.florianmichael.testserverutils.util.extension.checkPlayer
-import de.florianmichael.testserverutils.util.extension.prefixedMessage
+import de.florianmichael.spigotcommandutils.SpigotCommandUtils
+import de.florianmichael.spigotcommandutils.command.WrappedCommand
+import de.florianmichael.spigotcommandutils.command.brigadier.SpigotCommandSource
+import de.florianmichael.spigotcommandutils.config.ConfigurationWrapper
+import de.florianmichael.spigotcommandutils.util.extension.checkPermission
+import de.florianmichael.spigotcommandutils.util.extension.checkPlayer
+import de.florianmichael.spigotcommandutils.util.extension.prefixedMessage
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -26,7 +26,7 @@ class WrappedCommandSocialSpy : WrappedCommand("socialspy") {
     private val listeners = ArrayList<UUID>()
 
     init {
-        TestServerUtils.event(object : Listener {
+        SpigotCommandUtils.event(object : Listener {
             @EventHandler
             fun onPerformCommand(event: PlayerCommandPreprocessEvent) {
                 for (listener in listeners)

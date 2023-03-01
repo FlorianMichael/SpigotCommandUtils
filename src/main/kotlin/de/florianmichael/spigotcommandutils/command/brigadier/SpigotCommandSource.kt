@@ -1,4 +1,4 @@
-package de.florianmichael.testserverutils.command.brigadier
+package de.florianmichael.spigotcommandutils.command.brigadier
 
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender

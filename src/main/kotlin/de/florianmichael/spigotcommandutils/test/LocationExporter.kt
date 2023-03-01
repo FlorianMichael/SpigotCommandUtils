@@ -1,6 +1,6 @@
-package de.florianmichael.testserverutils.test
+package de.florianmichael.spigotcommandutils.test
 
-import de.florianmichael.testserverutils.TestServerUtils
+import de.florianmichael.spigotcommandutils.SpigotCommandUtils
 import org.bukkit.Location
 import org.bukkit.configuration.file.YamlConfiguration
 import java.io.File
@@ -10,7 +10,7 @@ import java.io.File
  */
 class LocationExporter {
     fun uwu(location: Location) {
-        val path = File(TestServerUtils.get().dataFolder, "test.yml")
+        val path = File(SpigotCommandUtils.get().dataFolder, "test.yml")
         val test = YamlConfiguration.loadConfiguration(path)
         test.set("position", location)
 

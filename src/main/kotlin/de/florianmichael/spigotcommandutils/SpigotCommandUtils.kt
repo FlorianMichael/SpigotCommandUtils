@@ -1,20 +1,20 @@
-package de.florianmichael.testserverutils
+package de.florianmichael.spigotcommandutils
 
-import de.florianmichael.testserverutils.command.ManagerCommand
-import de.florianmichael.testserverutils.config.ConfigurationWrapper
+import de.florianmichael.spigotcommandutils.command.ManagerCommand
+import de.florianmichael.spigotcommandutils.config.ConfigurationWrapper
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 
-open class TestServerUtils : JavaPlugin() {
+open class SpigotCommandUtils : JavaPlugin() {
 
     companion object {
         fun event(listener: Listener) {
             get().apply { server.pluginManager.registerEvents(listener, this) }
         }
 
-        fun get() = getPlugin(TestServerUtils::class.java)
+        fun get() = getPlugin(SpigotCommandUtils::class.java)
     }
 
     override fun onEnable() {

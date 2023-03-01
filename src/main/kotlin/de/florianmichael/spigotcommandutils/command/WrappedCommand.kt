@@ -1,10 +1,10 @@
-package de.florianmichael.testserverutils.command
+package de.florianmichael.spigotcommandutils.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.arguments.ArgumentType
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.builder.RequiredArgumentBuilder
-import de.florianmichael.testserverutils.command.brigadier.SpigotCommandSource
+import de.florianmichael.spigotcommandutils.command.brigadier.SpigotCommandSource
 
 abstract class WrappedCommand(private vararg val aliases: String)  {
 
